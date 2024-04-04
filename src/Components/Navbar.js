@@ -2,8 +2,12 @@
 import { FcShop } from "react-icons/fc";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import { GiMaterialsScience } from "react-icons/gi";
 import { setPage } from '../redux/slices/pageSlice';
+import { MdHistoryEdu } from "react-icons/md";
+import { MdOutlineSportsHandball } from "react-icons/md";
+import { FaFantasyFlightGames } from "react-icons/fa6";
+import { GiLevelFourAdvanced } from "react-icons/gi";
 
 
 const Navbar = () => {
@@ -39,16 +43,34 @@ const Navbar = () => {
     </div>
 
     <nav>
-      <div className="flex gap-7 border rounded-md border-black">
-      <Link to="/" className="hover:text-gray-400 text-3xl"><span> <FcShop />Advanture</span></Link>
-      <Link to="/" className="hover:text-gray-400 text-3xl"><FcShop />Fantsay</Link>
-      <Link to="/" className="hover:text-gray-400 text-3xl"><FcShop />Mystrey</Link>
-      <Link to="/" className="hover:text-gray-400 text-3xl"><FcShop />Science</Link>
-      <Link to="/" className="hover:text-gray-400 text-3xl"><FcShop />History</Link>
-      <Link to="/" className="hover:text-gray-400 text-3xl"><FcShop />Sports</Link>
-         
-          
-        </div>
+     
+
+<div className="flex gap-7 border rounded-md border-black justify-around">
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <GiLevelFourAdvanced className="mr-1" />
+        <span>Advanture</span>
+      </Link>
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <FaFantasyFlightGames className="mr-1" />
+        <span>Fantasy</span>
+      </Link>
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <FcShop className="mr-1" />
+        <span>Mystery</span>
+      </Link>
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <GiMaterialsScience className="mr-1" />
+        <span>Science</span>
+      </Link>
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <MdHistoryEdu className="mr-1" />
+        <span>History</span>
+      </Link>
+      <Link to="/" className="hover:text-gray-400 text-3xl flex items-center">
+        <MdOutlineSportsHandball className="mr-1" />
+        <span>Sports</span>
+      </Link>
+    </div>
       </nav>
     </div>
     
