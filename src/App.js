@@ -1,21 +1,19 @@
-
-
-import Home from './pages/Home';
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import { Route,Routes } from 'react-router-dom';
-import CartDetails from './Components/CartDetails';
+import Home from './Components/Home';
+import CardDetails from './Components/CardDetails';
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-     <CartDetails/>
-     <Routes>
-          <Route path="/" element={<Home/>} />
-         
-        </Routes>
+    <div>
+      <Navbar/> 
+     
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cardDetails/:id" element={<CardDetails />} />
+      </Routes>
     </div>
   );
 }
